@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Notas Definitivas - Alex Mariana Ibarguen Rumpf</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+/* ---------- ESTILOS GENERALES ---------- */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- MENÚ LATERAL DESPLEGABLE ---------- */
+.menu-btn {
+    font-size: 28px;
+    cursor: pointer;
+    padding: 15px;
+    background: white;
+    border: none;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color: #1e3c72;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    color: white;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+/* ---------- ENCABEZADO ---------- */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px 25px;
+    background: white;
+    border-bottom: 2px solid #e4e4e4;
+    gap: 15px;
+}
+
+.header img {
+    height: 55px;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-info .titulo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2b4d90;
+}
+
+.header-info .subtitulo {
+    font-size: 15px;
+    color: #555;
+}
+
+/* ---------- CUADRO PRINCIPAL ---------- */
+.contenedor {
+    background: white;
+    width: 92%;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+h2 {
+    background-color: #2b4d90;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    width: fit-content;
+}
+
+/* ---------- TABLA ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    background: white;
+}
+
+th {
+    background: #eef1f8;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-weight: bold;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* CÓDIGOS AZULES */
+.codigo {
+    color: #2b4d90;
+    font-weight: bold;
+}
+
+/* ---------- CUADRO INFERIOR ---------- */
+.recuadro-info {
+    margin-top: 25px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.recuadro-info h3 {
+    margin-top: 0;
+    color: #2b4d90;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.caja {
+    padding: 18px;
+    background: #f7f8fc;
+    border-radius: 10px;
+    border-left: 4px solid #2b4d90;
+}
+
+.caja span {
+    font-weight: bold;
+    color: #2b4d90;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+</style>
+
+<script>
+function abrirMenu() {
+    document.getElementById("sidebar").style.width = "260px";
+}
+function cerrarMenu() {
+    document.getElementById("sidebar").style.width = "0";
+}
+</script>
+
+</head>
+
+<body>
+
+<!-- BOTÓN MENÚ -->
+<button class="menu-btn" onclick="abrirMenu()">☰</button>
+
+<!-- MENÚ LATERAL -->
+<div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" onclick="cerrarMenu()">✖ Cerrar</a>
+    <a href="dashboard.html"> Inicio</a>
+    <a href="perfil.html"> Perfil del estudiante</a>
+    <a href="notas.html"><b> Notas</b></a>
+    <a href="#">Trámites</a>
+    <a href="#">Bienestar</a>
+    <a href="#">Inscripción</a>
+    <a href="#">Finanzas</a>
+    <a href="#">Cerrar sesión</a>
+</div>
+
+<!-- ENCABEZADO CON LOGO -->
+<div class="header">
+    <img src="logotipo.png" alt="Logo">
+    <div class="header-info">
+        <div class="titulo">Alex Mariana Ibarguen Rumpf</div>
+        <div class="subtitulo">Código: 0000336259</div>
+    </div>
+</div>
+
+<!-- CUADRO PRINCIPAL -->
+<div class="contenedor">
+
+<h2>Calificaciones Oficiales</h2>
+
+<table>
+    <tr>
+        <th>Clase</th>
+        <th>Descripción</th>
+        <th>Unidades</th>
+        <th>Calificación</th>
+    </tr>
+
+    <tr>
+        <td class="codigo"><u>AFECSEX578002</u></td>
+        <td>P&CII PERSONA Y AFECTIVIDAD</td>
+        <td>2,00</td>
+        <td>4.8</td>
+    </tr>
+
+    <tr>
+        <td class="codigo">EMPINNOE81112</u></td>
+        <td>IND. MUNDIALES INNOVADORAS</td>
+        <td>2,00</td>
+        <td>4.9</td>
+    </tr>
+
+    <tr>
+        <td class="codigo">FINANZAS81118</u></td>
+        <td>MATEMATICAS FINANCIERAS</td>
+        <td>2,00</td>
+        <td>4.0</td>
+    </tr>
+
+    <tr>
+        <td class="codigo">INGLES62135</u></td>
+        <td>INGLES 5</td>
+        <td>3,00</td>
+        <td>3.8</td>
+    </tr>
+
+    <tr>
+        <td class="codigo">MATFISEI21101</u></td>
+        <td>CALCULO DIFERENCIAL</td>
+        <td>3,00</td>
+        <td>3.4</td>
+    </tr>
+
+    <tr>
+        <td class="codigo">NEGOCOMIN3602ECI</u></td>
+        <td>ELECTIVA DE COMERCIO INTERNACIONAL</td>
+        <td>3,00</td>
+        <td>4.4</td>
+    </tr>
+
+    <tr>
+        <td class="codigo">SEREICEA81121</u></td>
+        <td>TEORIA SERVICIO LA CALIDAD</td>
+        <td>3,00</td>
+        <td>4.2</td>
+    </tr>
+</table>
+
+</div>
+
+<!-- CUADRO INFERIOR -->
+<div class="recuadro-info">
+
+<h3>Resumen Académico</h3>
+
+<div class="info-grid">
+
+    <div class="caja">
+        <span>Promedio del ciclo:</span><br> 4.16
+    </div>
+
+    <div class="caja">
+        <span>Promedio acumulado:</span><br> 4.07
+    </div>
+
+    <div class="caja">
+        <span>Programa:</span><br> Administración de Mercadeo y Logística Internacional
+    </div>
+
+</div>
+
+</div>
+
+</body>
+</html>
+
